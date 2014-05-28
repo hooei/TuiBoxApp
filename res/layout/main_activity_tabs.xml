@@ -1,0 +1,55 @@
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/container"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context="com.whtd.tuiboxapp.main.MainActivity"
+    tools:ignore="MergeRootFrame" >
+
+    <FrameLayout
+        android:id="@+id/main_realtabcontent"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1"
+        
+         />
+    
+    <RadioGroup 
+		android:id="@+id/main_tabs"
+		android:layout_width="match_parent"
+		android:layout_height="wrap_content"
+		android:orientation="horizontal"
+		android:background="@drawable/maintab_toolbar_bg"
+        >
+        
+        <RadioButton
+            android:id="@+id/main_tabs_game"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:gravity="center"
+            android:background="@drawable/main_tab_item_sel_bg"
+            android:drawableTop="@drawable/main_tab_item_game"
+            android:button="@null"
+            android:textColor="#ffffff"
+            android:textSize="13sp"
+            android:text="游戏"
+             />
+
+        <RadioButton
+            android:id="@+id/main_tabs_set"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:gravity="center"
+            android:background="@drawable/main_tab_item_sel_bg"
+            android:drawableTop="@drawable/main_tab_item_game"
+            android:button="@null"
+            android:textColor="#ffffff"
+            android:textSize="13sp"
+            android:text="设置"
+             />
+  	  </RadioGroup>
+
+</LinearLayout>
