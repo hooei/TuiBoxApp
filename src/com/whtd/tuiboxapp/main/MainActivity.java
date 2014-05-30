@@ -1,30 +1,32 @@
 package com.whtd.tuiboxapp.main;
 
-import org.w3c.dom.Text;
-
+import android.app.FragmentManager;
 import android.os.Bundle;
+import android.support.v4.app.Fragment;
 import android.support.v4.app.FragmentActivity;
 import android.support.v4.app.FragmentTabHost;
+import android.support.v4.app.FragmentTransaction;
+import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
-import android.widget.ImageView;
-import android.widget.TabHost.TabSpec;
-import android.widget.TextView;
+import android.widget.RadioButton;
+import android.widget.RadioGroup;
+import android.widget.RadioGroup.OnCheckedChangeListener;
 
 import com.whtd.tuiboxapp.R;
 
-public class MainActivity extends FragmentActivity {
+public class MainActivity extends FragmentActivity implements OnCheckedChangeListener {
 
-	public View GameView;
-	public View SetView;
 	
-	private Class tabFragments[] = {MainTabsGame.class,MainTabsSetting.class};
-	private String tabIndex[] = {"game","setting"};
-	private String tabText[] = {"游戏","设置"};
-	private int tabImage[] = {R.drawable.main_tab_item_game, R.drawable.main_tab_item_set};
-	private FragmentTabHost tabHost ;
+	private RadioGroup radioGroup ;
 	
-	private LayoutInflater layoutInflater ;
+	private MainTabsGame TabsGame;
+	private MainTabsSetting TabsSetting;
+	private Fragment tabsInstance[] ={TabsGame,TabsSetting};
+	private Class tabsClass[] = {MainTabsGame.class,MainTabsSetting.class};
+	
+	private FragmentTransaction transaction;
+	
 	@Override
 	protected void onCreate(Bundle savedInstanceState) {
 		super.onCreate(savedInstanceState);
@@ -34,29 +36,55 @@ public class MainActivity extends FragmentActivity {
 	}
 
 	private void initView(){
-//		tabHost = (FragmentTabHost) findViewById(android.R.id.tabhost);
-//		tabHost.setup(this, getSupportFragmentManager(),R.id.main_realtabcontent);
-//		
-//		TabSpec tabSpec = null;
-//		for (int i = 0; i < tabFragments.length; i++) {
-//			tabSpec = tabHost.newTabSpec(tabIndex[i]).setIndicator(getMainTabView(i));
-//			tabHost.addTab(tabSpec,tabFragments[i],null);
-//		}
+		
+		radioGroup = (RadioGroup) this.findViewById(R.id.main_tabs);
+		radioGroup.setOnCheckedChangeListener(this);
+		
+		radioGroup.check(R.id.main_tabs_game);
+	}
+
+	@Override
+	public void onCheckedChanged(RadioGroup group, int index) {
+		
+		switch (index) {
+		case R.id.main_tabs_game:
+			ShowFragment(MainTabsGame.class);
+			break;
+
+		case  R.id.main_tabs_set:
+			
+			ShowFragment(MainTabsSetting.class);
+			break;
+		}
 	}
 	
-//	private View getMainTabView(int index){
-//		
-//		layoutInflater = LayoutInflater.from(this); 
-//		View view = layoutInflater.inflate(R.layout.main_tab_item_view, null);
-//		
-//		ImageView img = (ImageView) view.findViewById(R.id.main_tab_img);
-//		img.setImageResource(tabImage[index]);
-//		
-//		TextView txt = (TextView) view.findViewById(R.id.main_tab_txt);
-//		txt.setText(tabText[index]);
-//		
-//		return view;
-//	}
+	/**
+	 * 显示隐藏Fragment
+	 * @param mClass Fragment
+	 */
+	private void ShowFragment(Class mClass)
+	{
+		try {
+			transaction = getSupportFragmentManager().beginTransaction();
+			
+			for (int i = 0; i < tabsInstance.length; i++) {
+				if (tabsClass[i].equals(mClass)) {
+					if (tabsInstance[i] == null) {
+						tabsInstance[i] = (Fragment) mClass.newInstance();
+						transaction.add(R.id.main_realtabcontent, tabsInstance[i]);
+					}else{
+						transaction.show(tabsInstance[i]);
+					}
+				} else if (tabsInstance[i] != null) {
+					transaction.hide(tabsInstance[i]);
+				}
+			}
 
-
+			transaction.commit();
+			
+		} catch (Exception e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+		}
+	}
 }

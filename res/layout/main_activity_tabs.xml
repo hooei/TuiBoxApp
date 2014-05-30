@@ -12,7 +12,6 @@
         android:layout_width="match_parent"
         android:layout_height="0dp"
         android:layout_weight="1"
-        
          />
     
     <RadioGroup 
@@ -25,31 +24,16 @@
         
         <RadioButton
             android:id="@+id/main_tabs_game"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_weight="1"
-            android:gravity="center"
-            android:background="@drawable/main_tab_item_sel_bg"
+            style="@style/main_tab_radiobtn"
             android:drawableTop="@drawable/main_tab_item_game"
-            android:button="@null"
-            android:textColor="#ffffff"
-            android:textSize="13sp"
-            android:text="游戏"
-             />
+            android:text="游戏"/>
 
         <RadioButton
             android:id="@+id/main_tabs_set"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_weight="1"
-            android:gravity="center"
-            android:background="@drawable/main_tab_item_sel_bg"
-            android:drawableTop="@drawable/main_tab_item_game"
-            android:button="@null"
-            android:textColor="#ffffff"
-            android:textSize="13sp"
-            android:text="设置"
-             />
+            style="@style/main_tab_radiobtn"
+            android:drawableTop="@drawable/main_tab_item_set"
+            android:text="设置" />
+        
   	  </RadioGroup>
 
 </LinearLayout>
