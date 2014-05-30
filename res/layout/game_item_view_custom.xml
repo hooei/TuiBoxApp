@@ -1,0 +1,127 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/component_re_id"
+    android:layout_width="fill_parent"
+    android:layout_height="wrap_content"
+    android:gravity="center_vertical"
+    android:orientation="vertical" >
+ 
+    
+<LinearLayout
+    android:layout_width="fill_parent"
+    android:layout_height="wrap_content"
+    android:gravity="center_vertical"
+    android:orientation="vertical"
+    android:layout_margin="6dp"
+    android:background="#dddddd" >
+
+	    <LinearLayout
+	    android:layout_width="fill_parent"
+	    android:layout_height="wrap_content"
+	    android:gravity="center_vertical"
+	    android:orientation="horizontal"
+	    android:padding="6dp"
+	    android:background="#ffffff" >
+	    
+	    <com.whtd.tuiboxapp.tools.imgview.SmartImageView
+	        android:id="@+id/custom_item_img_icon"
+	        android:layout_width="64dip"
+	        android:layout_height="64dip"
+	        android:background="@drawable/bg_white_custom_item"
+	        android:scaleType="fitXY"
+	        android:padding="2dp"                
+	        android:minHeight="64dip" />
+	
+	    <LinearLayout
+	        android:id="@+id/custom_item_ll_open_detail"
+	        android:layout_width="wrap_content"
+	        android:layout_height="wrap_content"
+	        android:orientation="vertical"
+	        android:clickable="true" >
+	
+	            <TextView
+	                android:id="@+id/custom_item_txt_name"
+	                android:layout_width="wrap_content"
+	                android:layout_height="wrap_content"
+	                android:text="name111"
+	                android:textSize="22dip" 
+	                android:paddingLeft="4dp"
+	                android:textColor="#333333"/>
+	
+	            <RatingBar
+	                android:id="@+id/custom_item_rat_star"
+	                style="?android:attr/ratingBarStyleSmall"
+	                android:layout_width="64dp"
+	                android:layout_height="wrap_content"
+	                android:isIndicator="true"
+	                android:numStars="5"
+	                android:paddingLeft="4dp" />
+	
+	        <LinearLayout
+	            android:id="@+id/tableRow2"
+	            android:layout_width="wrap_content"
+	            android:layout_height="wrap_content" 
+	            android:orientation="horizontal">
+	
+	            <TextView
+	                android:id="@+id/custom_item_download_count"
+	                android:layout_width="wrap_content"
+	                android:layout_height="wrap_content"
+	                android:textColor="#353535"
+	                android:paddingLeft="4dp"
+	                android:text="TextView" />
+	
+	            <TextView
+	                android:id="@+id/textView3"
+	                android:layout_width="wrap_content"
+	                android:layout_height="wrap_content"
+	                android:text="|"
+	                android:padding="10dp" />
+	
+	            <TextView
+	                android:id="@+id/custom_item_apk_size"
+	                android:layout_width="wrap_content"
+	                android:layout_height="wrap_content"
+	                android:textColor="#353535"
+	                android:text="TextView" />
+	
+	        </LinearLayout>
+	    </LinearLayout>
+	
+	    <RelativeLayout
+	        android:id="@+id/custom_item_rl_operate"
+	        android:layout_width="fill_parent"
+	        android:layout_height="wrap_content"
+	        android:gravity="center"
+	        android:padding="10dp" 
+	        android:clickable="true">
+	
+	        <ProgressBar
+	            android:id="@+id/custom_item_progress_download"
+	            style="?android:attr/progressBarStyleHorizontal"
+	            android:layout_width="72dip"
+	            android:layout_height="30dip"
+	            android:layout_centerHorizontal="true"
+	            android:gravity="center"/>
+	
+	        <TextView
+	            android:id="@+id/custom_item_download_txt"
+	            android:layout_width="wrap_content"
+	            android:layout_height="wrap_content"
+	            android:layout_centerInParent="true"
+	            android:gravity="center"
+	            android:text="下 载" />
+	        
+	    </RelativeLayout>
+	</LinearLayout>
+	
+	<TextView
+	    android:id="@+id/custom_item_summary"
+	    android:layout_width="wrap_content"
+	    android:layout_height="wrap_content"
+	    android:text="TextView"
+	    android:textColor="#353535"
+	    android:padding="6dp" />
+	
+	</LinearLayout>
+</LinearLayout>
