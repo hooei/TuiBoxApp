@@ -388,6 +388,39 @@ theme attribute (in the form
 containing a value of this type.
          */
         public static final int itemPadding=0x7f010033;
+        /** <p>Must be a string value, using '\\;' to escape characters such as '\\n' or '\\uxxxx' for a unicode character.
+<p>This may also be a reference to a resource (in the form
+"<code>@[<i>package</i>:]<i>type</i>:<i>name</i></code>") or
+theme attribute (in the form
+"<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>")
+containing a value of this type.
+         */
+        public static final int itemapksize=0x7f01006c;
+        /** <p>Must be a string value, using '\\;' to escape characters such as '\\n' or '\\uxxxx' for a unicode character.
+<p>This may also be a reference to a resource (in the form
+"<code>@[<i>package</i>:]<i>type</i>:<i>name</i></code>") or
+theme attribute (in the form
+"<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>")
+containing a value of this type.
+         */
+        public static final int itemcount=0x7f01006b;
+        /**  attr name="itemicon" format="reference"/ 
+         <p>Must be a string value, using '\\;' to escape characters such as '\\n' or '\\uxxxx' for a unicode character.
+<p>This may also be a reference to a resource (in the form
+"<code>@[<i>package</i>:]<i>type</i>:<i>name</i></code>") or
+theme attribute (in the form
+"<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>")
+containing a value of this type.
+         */
+        public static final int itemname=0x7f01006a;
+        /** <p>Must be a string value, using '\\;' to escape characters such as '\\n' or '\\uxxxx' for a unicode character.
+<p>This may also be a reference to a resource (in the form
+"<code>@[<i>package</i>:]<i>type</i>:<i>name</i></code>") or
+theme attribute (in the form
+"<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>")
+containing a value of this type.
+         */
+        public static final int itemsummary=0x7f01006d;
         /**  Drawable used as a background for selected list items. 
          <p>Must be a reference to another resource, in the form "<code>@[+][<i>package</i>:]<i>type</i>:<i>name</i></code>"
 or to a theme attribute in the form "<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>".
@@ -982,22 +1015,25 @@ containing a value of this type.
         public static final int abc_textfield_searchview_right_holo_dark=0x7f020055;
         public static final int abc_textfield_searchview_right_holo_light=0x7f020056;
         public static final int bg_white_custom_item=0x7f020057;
-        public static final int home_btn_bg=0x7f020058;
-        public static final int ic_launcher=0x7f020059;
-        public static final int icon_home_nor=0x7f02005a;
-        public static final int icon_home_sel=0x7f02005b;
-        public static final int icon_meassage_nor=0x7f02005c;
-        public static final int icon_meassage_sel=0x7f02005d;
-        public static final int icon_more_nor=0x7f02005e;
-        public static final int icon_more_sel=0x7f02005f;
-        public static final int icon_selfinfo_nor=0x7f020060;
-        public static final int icon_selfinfo_sel=0x7f020061;
-        public static final int icon_square_nor=0x7f020062;
-        public static final int icon_square_sel=0x7f020063;
-        public static final int main_tab_item_game=0x7f020064;
-        public static final int main_tab_item_sel_bg=0x7f020065;
-        public static final int main_tab_item_set=0x7f020066;
-        public static final int maintab_toolbar_bg=0x7f020067;
+        public static final int bg_white_widget=0x7f020058;
+        public static final int home_btn_bg=0x7f020059;
+        public static final int ic_launcher=0x7f02005a;
+        public static final int icon_home_nor=0x7f02005b;
+        public static final int icon_home_sel=0x7f02005c;
+        public static final int icon_meassage_nor=0x7f02005d;
+        public static final int icon_meassage_sel=0x7f02005e;
+        public static final int icon_more_nor=0x7f02005f;
+        public static final int icon_more_sel=0x7f020060;
+        public static final int icon_selfinfo_nor=0x7f020061;
+        public static final int icon_selfinfo_sel=0x7f020062;
+        public static final int icon_square_nor=0x7f020063;
+        public static final int icon_square_sel=0x7f020064;
+        public static final int item_bg_shadow=0x7f020065;
+        public static final int main_tab_item_game=0x7f020066;
+        public static final int main_tab_item_sel_bg=0x7f020067;
+        public static final int main_tab_item_set=0x7f020068;
+        public static final int maintab_toolbar_bg=0x7f020069;
+        public static final int mainwnd_shadow=0x7f02006a;
     }
     public static final class id {
         public static final int action_bar=0x7f05001c;
@@ -1037,7 +1073,8 @@ containing a value of this type.
         public static final int end=0x7f050013;
         public static final int expand_activities_button=0x7f050026;
         public static final int expanded_menu=0x7f05002c;
-        public static final int games_view=0x7f050051;
+        public static final int games_scroll=0x7f050051;
+        public static final int games_view=0x7f050052;
         public static final int home=0x7f050014;
         public static final int homeAsUp=0x7f050005;
         public static final int icon=0x7f05002a;
@@ -1077,7 +1114,6 @@ containing a value of this type.
         public static final int submit_area=0x7f050039;
         public static final int tabMode=0x7f050002;
         public static final int tableRow2=0x7f050042;
-        public static final int test=0x7f050052;
         public static final int textView3=0x7f050044;
         public static final int title=0x7f05002b;
         public static final int top_action_bar=0x7f050020;
@@ -2450,7 +2486,7 @@ containing a value of this type.
          */
         public static final int[] MenuView = {
             0x010100ae, 0x0101012c, 0x0101012d, 0x0101012e,
-            0x0101012f, 0x01010130, 0x01010131, 0x01010435
+            0x0101012f, 0x01010130, 0x01010131, 0x0101041a
         };
         /**
           <p>
@@ -2937,9 +2973,81 @@ containing a value of this type.
         */
         public static final int View_paddingStart = 1;
         /** Attributes that can be used with a custom_item_view_attrs.
+           <p>Includes the following attributes:</p>
+           <table>
+           <colgroup align="left" />
+           <colgroup align="left" />
+           <tr><th>Attribute</th><th>Description</th></tr>
+           <tr><td><code>{@link #custom_item_view_attrs_itemapksize com.whtd.tuiboxapp:itemapksize}</code></td><td></td></tr>
+           <tr><td><code>{@link #custom_item_view_attrs_itemcount com.whtd.tuiboxapp:itemcount}</code></td><td></td></tr>
+           <tr><td><code>{@link #custom_item_view_attrs_itemname com.whtd.tuiboxapp:itemname}</code></td><td> attr name="itemicon" format="reference"/ </td></tr>
+           <tr><td><code>{@link #custom_item_view_attrs_itemsummary com.whtd.tuiboxapp:itemsummary}</code></td><td></td></tr>
+           </table>
+           @see #custom_item_view_attrs_itemapksize
+           @see #custom_item_view_attrs_itemcount
+           @see #custom_item_view_attrs_itemname
+           @see #custom_item_view_attrs_itemsummary
          */
         public static final int[] custom_item_view_attrs = {
-            
+            0x7f01006a, 0x7f01006b, 0x7f01006c, 0x7f01006d
         };
+        /**
+          <p>This symbol is the offset where the {@link com.whtd.tuiboxapp.R.attr#itemapksize}
+          attribute's value can be found in the {@link #custom_item_view_attrs} array.
+
+
+          <p>Must be a string value, using '\\;' to escape characters such as '\\n' or '\\uxxxx' for a unicode character.
+<p>This may also be a reference to a resource (in the form
+"<code>@[<i>package</i>:]<i>type</i>:<i>name</i></code>") or
+theme attribute (in the form
+"<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>")
+containing a value of this type.
+          @attr name com.whtd.tuiboxapp:itemapksize
+        */
+        public static final int custom_item_view_attrs_itemapksize = 2;
+        /**
+          <p>This symbol is the offset where the {@link com.whtd.tuiboxapp.R.attr#itemcount}
+          attribute's value can be found in the {@link #custom_item_view_attrs} array.
+
+
+          <p>Must be a string value, using '\\;' to escape characters such as '\\n' or '\\uxxxx' for a unicode character.
+<p>This may also be a reference to a resource (in the form
+"<code>@[<i>package</i>:]<i>type</i>:<i>name</i></code>") or
+theme attribute (in the form
+"<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>")
+containing a value of this type.
+          @attr name com.whtd.tuiboxapp:itemcount
+        */
+        public static final int custom_item_view_attrs_itemcount = 1;
+        /**
+          <p>
+          @attr description
+           attr name="itemicon" format="reference"/ 
+
+
+          <p>Must be a string value, using '\\;' to escape characters such as '\\n' or '\\uxxxx' for a unicode character.
+<p>This may also be a reference to a resource (in the form
+"<code>@[<i>package</i>:]<i>type</i>:<i>name</i></code>") or
+theme attribute (in the form
+"<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>")
+containing a value of this type.
+          <p>This is a private symbol.
+          @attr name com.whtd.tuiboxapp:itemname
+        */
+        public static final int custom_item_view_attrs_itemname = 0;
+        /**
+          <p>This symbol is the offset where the {@link com.whtd.tuiboxapp.R.attr#itemsummary}
+          attribute's value can be found in the {@link #custom_item_view_attrs} array.
+
+
+          <p>Must be a string value, using '\\;' to escape characters such as '\\n' or '\\uxxxx' for a unicode character.
+<p>This may also be a reference to a resource (in the form
+"<code>@[<i>package</i>:]<i>type</i>:<i>name</i></code>") or
+theme attribute (in the form
+"<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>")
+containing a value of this type.
+          @attr name com.whtd.tuiboxapp:itemsummary
+        */
+        public static final int custom_item_view_attrs_itemsummary = 3;
     };
 }

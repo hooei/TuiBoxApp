@@ -18,8 +18,6 @@ public class MainTabsSetting extends Fragment {
 		
 			view = inflater.inflate(R.layout.main_tabs_setting, container,false);
 		
-			EditText e = (EditText) getActivity().findViewById(R.id.test);
-			e.setText("123");
 		return view;
 	}
 

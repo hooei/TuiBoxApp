@@ -1,7 +1,12 @@
 <?xml version="1.0" encoding="utf-8"?> 
 <resources>
     <declare-styleable name="custom_item_view_attrs">
-        
+
+        <!-- attr name="itemicon" format="reference"/ -->
+        <attr name="itemname" format="string"/>
+        <attr name="itemcount" format="string"/>
+        <attr name="itemapksize" format="string"/>
+        <attr name="itemsummary" format="string"/>
+
     </declare-styleable>
-    
 </resources>
